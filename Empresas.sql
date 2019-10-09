@@ -342,4 +342,12 @@ INSERT INTO Pedidos(NumPed,CodCli,CodFun,DataPed,DataEntrega,Frete) VALUES (1098
 INSERT INTO Pedidos(NumPed,CodCli,CodFun,DataPed,DataEntrega,Frete) VALUES (10984,'SAVEA',1,'1998/03/30','1998/04/27', 211.22);
 INSERT INTO Pedidos(NumPed,CodCli,CodFun,DataPed,DataEntrega,Frete) VALUES (10985,'HUNGO',2,'1998/03/30','1998/04/27', 91.51);
 
+-- SET SQL_SAFE_UPDATES = 0;
 
+SELECT Nome,Cidade,CEP FROM Funcionarios WHERE Cidade = 'london' OR Cidade = 'seattle';
+UPDATE Funcionarios set Salario = Salario * 2 WHERE Cidade = 'london';
+SELECT Salario FROM Funcionarios WHERE cidade = 'london';
+DESC Funcionarios;
+ROLLBACK;
+SELECT CodFun FROM Funcionarios WHERE NOT Cidade = 'london' AND Salario >= 1000;
+DELETE FROM Fornecedores WHERE CodFor = 5;
