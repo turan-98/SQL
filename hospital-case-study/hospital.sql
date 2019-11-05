@@ -1,5 +1,5 @@
 CREATE database Hospital;
-DROP DATABASE Hospital;
+--DROP DATABASE Hospital;
 USE Hospital; 
 
 CREATE TABLE MEDICOS(
