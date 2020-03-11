@@ -39,5 +39,10 @@ Inner join
 	Cidade c on C.IdCidade = v.Cidade
 ORDER BY 1
 --*--
-
+-- terminar 
+SELECT 
+	p.nomePessoa, v.Placa, v.Cor, F.NomeFabricante, p.CidadeReside
+from 
+ Veiculo v
+inner join Fabricante f on v.Marca = f.IdFabricante
 
